@@ -11,7 +11,6 @@ export const ProductBlock: React.FC<ProductType> = (props) => {
     const cartItem = useSelector((state: RootState) => state.cart.items.find(el => el.id === id))
     const dispatch = useDispatch()
     const onClickAdd = () => {
-
     const item = {type,id, sku,title,regular_price,image,brand, count:0}
         dispatch(addItem(item))
     }

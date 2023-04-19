@@ -1,13 +1,14 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {products, ProductType} from "assets/products";
 import {SortType} from "components/Redux/Slices/FilterSlice";
+import {sortProduct} from "common/utils/sort_items_utils";
 
 
-type InitialStateType = {
+export type InitialProductsStateType = {
     items: ProductType[]
     filteredItems: ProductType[]
 }
-const initialState: InitialStateType = {
+const initialState: InitialProductsStateType = {
     items: products,
     filteredItems: products
 }
@@ -20,26 +21,7 @@ const productsSlice = createSlice({
             state.items = payload;
         },
         sortItems(state, action: PayloadAction<SortType>) {
-            const order = action.payload.sortProp.includes('-') ? 'ask' : 'desc';
-            const sortBy = action.payload.sortProp.replace('-', '');
-
-            if (order === 'desc' && sortBy === 'price') {
-                state.filteredItems = state.filteredItems.sort((a, b) => b.regular_price.value - a.regular_price.value)
-            }
-            if (order === 'ask' && sortBy === 'price') {
-                state.filteredItems = state.filteredItems.sort((a, b) => a.regular_price.value - b.regular_price.value)
-            }
-            if (order === 'desc' && sortBy === 'title') {
-                state.filteredItems = state.filteredItems.sort((a, b) => {
-                    return (-1) * (a.title.localeCompare(b.title))
-                })
-            }
-            if (order === 'ask' && sortBy === 'title') {
-                state.filteredItems = state.filteredItems.sort((a, b) => {
-                    return a.title.localeCompare(b.title)
-                })
-            }
-
+            sortProduct(state,action.payload)
         },
         filterItems(state,
                     action: PayloadAction<number[]>

@@ -6,10 +6,12 @@ type CartItemType = {
     item: ProductForCartType
 }
 export const CartItem: FC<CartItemType> = (props) => {
-    const {type,id, sku,title,regular_price,image,brand, count} = props.item
+    const item = props.item
+    const {type,id, sku,title,regular_price,image,brand, count}=item
     const dispatch = useDispatch()
+
     const onClickPlus = () => {
-        dispatch(addItem({id: id}))
+        dispatch(addItem(item))
     }
     const onClickMinus = () => {
         dispatch(minusItem(id))
