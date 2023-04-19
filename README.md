@@ -1,46 +1,15 @@
-# Getting Started with Create React App
+Тестовая задача:
+Файлы для задачи: https://app.aaccent.su/js/frontend-test.zip
+Необходимо адаптивную страницу со списком товаров, фильтром по брендам. Список товаров находится в файле /assets/products.json, список брендов в файле /assets/brands.json 
+Дизайн на свое усмотрение, примерный вид отображены в схемах desktop.png, mobile.png 
+Также на странице должна быть иконка корзины, со счетчиком товаров в корзине. По клику на иконку должен совершаться переход на страницу корзины.
+Должна быть пагинация, по 6 товаров на страницу
+Должна быть возможность отправлять товары в корзину. Счетчик должен обновляться без перезагрузки страницы. Фильтрация товаров должна проходить без перезагрузки.
+На странице корзины должен быть список товаров, с ценой, переключателем количества, автоматическим пересчетом итоговый цены, должна быть поля имя, телефон и кнопка «Оформить заказ».
+При оформлении заказа должен отправиться POST-запрос на адрес https://app.aaccent.su/js/confirm.php с json-данными о заказе в свободном формате.
+Запрос вернет JSON-ответ “{“result”:”ok”}” , по возвращению этих данных должно всплыть модальное окно об успешном оформлении, при нажатии на кнопку «закрыть» корзина должна очищаться и переадресовываться на главную страницу
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Веб-приложение необходимо сделать в виде SPA-приложения.
+Результат должен быть выгружен на github.com 
+Будет плюсом добавление «фишек», а-ля сортировки товаров, окон с быстрым просмотром товаров. 
+Можно добавлять дополнительные json-данные, файлы и пр., по усмотрению исполнителя
