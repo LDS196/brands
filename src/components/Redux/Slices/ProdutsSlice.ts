@@ -23,9 +23,7 @@ const productsSlice = createSlice({
         sortItems(state, action: PayloadAction<SortType>) {
             sortProduct(state,action.payload)
         },
-        filterItems(state,
-                    action: PayloadAction<number[]>
-        ) {
+        filterItems(state, action: PayloadAction<number[]>) {
             state.filteredItems = state.items.filter(el => {
                 if (action.payload.length) {
                     return action.payload.includes(el.id)
