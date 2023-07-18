@@ -1,3 +1,38 @@
+:seedling: <a href="https://lds196.github.io/brands/" target="_blank">Brands</a>
+---
+приложение представляет интернет магазин. Пользователи могут сортировать и фильтровать товары, добавлять и удалять их из корзины, и другое.
+
+## Технологии
+![React](https://img.shields.io/badge/-React-61daf8?logo=react&logoColor=black)
+![REDUX](https://img.shields.io/badge/-Redux-yellow)
+![TypeScript](https://img.shields.io/badge/-TypeScript-blue)
+
+![BEM](https://img.shields.io/badge/-BEM-blue)
+![HTML5](https://img.shields.io/badge/-HTML5-e34f26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/-CSS3-1572b6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/-JavaScript-f7df1e?logo=javaScript&logoColor=black)
+
+![Webpack](https://img.shields.io/badge/-Webpack-99d6f8?logo=webpack&logoColor=black)
+![API](https://img.shields.io/badge/-Fake_Api-yellow)
+
+Clone repositories:
+```
+git clone https://github.com/LDS196/brands.git
+```
+Install dependencies:
+```
+yarn install
+```
+Start project: 
+```
+yarn start
+```
+Deploy project:
+```
+yarn deploy
+```
+![image](https://github.com/LDS196/brands/assets/105713345/9e9d3564-8b84-4bd3-8d4f-20c7da02a439)
+
 Тестовая задача:
 Файлы для задачи: https://app.aaccent.su/js/frontend-test.zip
 Необходимо адаптивную страницу со списком товаров, фильтром по брендам. Список товаров находится в файле /assets/products.json, список брендов в файле /assets/brands.json 
