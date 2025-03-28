@@ -1,4 +1,5 @@
 :seedling: <a href="https://lds196.github.io/brands/" target="_blank">Brands</a>
+https://lds196.github.io/brands/
 ---
 приложение представляет интернет магазин. Пользователи могут сортировать и фильтровать товары, добавлять и удалять их из корзины, и другое.
 
